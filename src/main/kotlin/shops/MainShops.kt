@@ -17,13 +17,14 @@ fun main() {
     println(shops(indShops, indHouses))
 }
 
+// Не самое лучшее решение
 fun shops(indShops: ArrayList<Int>, indHouses: ArrayList<Int>): Int {
     var minDistance = 10
     var currentDistance = 0
     var maxDistance = 0
 
     for (house in indHouses) {
-        for (shop in indShops) {
+        for (shop in indShops) { // Поиск получается O(N^2) - плохо
             currentDistance = kotlin.math.abs(house - shop)
             if (currentDistance < minDistance) minDistance = currentDistance
         }

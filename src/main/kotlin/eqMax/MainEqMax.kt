@@ -6,7 +6,7 @@ fun main() {
     var input = array[0]
     var max = input
 
-    while (input != 0) {
+    while (input != 0) { // Ввод чисел до 0
         input = scan.nextInt()
         array.add(input)
         if (max < input) max = input
